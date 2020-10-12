@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    text-rendering: optimizeLegibility;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.s-nav-main {
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.5)), url(./gl/burj_dubai_skyscrapers_uae-1920x1200.jpg);
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.Surface-Us-nav {
+    width: 100%;
+    background: rgba(128, 128, 128, 0.385);
+    height: auto;
+    padding: .8em;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.357);
+    box-shadow: 5px 5px 80px inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Surface-Us-nav .main-logo {
+    color: #fff;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-family: 'Lato';
+}
+
+.us {
+    font-weight: lighter;
+}
+
+.bars {
+    border: 1px solid #fff;
+    padding: .5em;
+}
+
+.fa-bars {
+    font-size: 1.3em;
+    color: #fff;
+}
+
+.welcome {
+    padding: 7em 10em;
+    text-align: center;
+}
+
+.welcome h2 {
+    color: #fff;
+    font-weight: bolder;
+    font-family: sans-serif;
+}
+
+.welcome p {
+    color: #fff;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.search-section {
+    padding: 2em;
+    text-align: center;
+}
+
+.search-section input[type="text"] {
+    padding: 1em;
+    width: 50%;
+    background: none;
+    border: 1px solid #fff;
+    border-radius: 2em;
+    color: #fff;
+    outline: none;
+}
+
+.search-section input[type="submit"] {
+    /* padding: 1em;
+    border: none;
+    border-radius: 2em;
+    background: transparent;
+    width: 5%;
+    cursor: pointer;
+    outline: none;
+    color: transparent; */
+}
+
+.search-section #searchUs {
+    position: absolute;
+    left: 71%;
+    margin-top: 1em;
+    color: #fff;
+    opacity: .8;
+    cursor: pointer;
+}
+
+::placeholder {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.main-div {
+    width: 100%;
+    height: auto;
+    padding: 2em;
+    background: #000;
+}
+
+.main-div .random-photos {
+    margin: auto;
+    padding: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 1px solid #fff;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.152);
+}
+
+@media (max-width: 768px) {
+    .welcome {
+        padding: 5em 7em;
+        text-align: center;
+    }
+}
