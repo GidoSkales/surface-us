@@ -121,14 +121,14 @@ body {
 }
 
 .main-div .random-photos {
-   /* margin: auto;
+    margin: auto;
     padding: auto;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     border: 1px solid #fff;
     height: 100vh;
-    background: rgba(255, 255, 255, 0.152); */
+    background: rgba(255, 255, 255, 0.152);
 }
 
 @media (max-width: 768px) {
