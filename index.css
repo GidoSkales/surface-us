@@ -6,7 +6,8 @@
 
 html {
     text-rendering: optimizeLegibility;
-    font-family: 'Lato', sans-serif;
+    /* font-family: 'Lato', sans-serif; */
+    font-family: 'Montez', cursive;
     font-size: 16px;
 }
 
@@ -24,7 +25,8 @@ body {
 
 .Surface-Us-nav {
     width: 100%;
-    background: rgba(128, 128, 128, 0.385);
+    /* background: rgba(128, 128, 128, 0.385); */
+    background: #fff;
     height: auto;
     padding: .8em;
     border-bottom: 3px solid rgba(0, 0, 0, 0.357);
@@ -32,14 +34,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: grey;
 }
 
 .Surface-Us-nav .main-logo {
-    color: #fff;
+    color: #000;
     font-weight: bolder;
     text-transform: uppercase;
-    font-size: 1.5em;
-    font-family: 'Lato';
+    font-size: 1.3em;
+    font-family: 'Montez', cursive;
+    letter-spacing: 1rem;
+    border: 1px solid #000;
+    padding: .2em;
+    border-radius: 2em;
 }
 
 .us {
@@ -64,13 +71,15 @@ body {
 .welcome h2 {
     color: #fff;
     font-weight: bolder;
-    font-family: sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 .welcome p {
     color: #fff;
-    font-size: 20px;
-    font-family: sans-serif;
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 1.2em;
+    font-family: 'Montez', cursive;
 }
 
 .search-section {
@@ -111,13 +120,14 @@ body {
 ::placeholder {
     color: #fff;
     font-size: 1.2em;
+    font-family: 'Montez', cursive;
 }
 
 .main-div {
     width: 100%;
     height: auto;
     padding: 2em;
-    background: #000;
+    background: #fff;
 }
 
 .main-div .random-photos {
@@ -126,14 +136,78 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    border: 1px solid #fff;
+    border: 1px solid #000;
     height: 100vh;
     background: rgba(255, 255, 255, 0.152);
 }
 
 @media (max-width: 768px) {
     .welcome {
-        padding: 5em 7em;
+        padding: 5em 5em;
         text-align: center;
+    }
+
+    .search-section input[type="text"] {
+        padding: 1em;
+        width: 100%;
+        background: none;
+        border: 1px solid #fff;
+        border-radius: 2em;
+        color: #fff;
+        outline: none;
+    }
+
+    .search-section #searchUs {
+        position: absolute;
+        left: 90%;
+        margin-top: 1em;
+        color: #fff;
+        opacity: .8;
+        cursor: pointer;
+    }
+
+    .s-nav-main {
+        background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.5)), url(./gl/burj_dubai_skyscrapers_uae-1920x1200.jpg);
+        height: 70vh;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+
+    .main-div {
+        padding: 1.5em;
+        background: #fff;
+    }
+
+    .Surface-Us-nav .main-logo {
+        color: #000;
+        font-weight: bolder;
+        text-transform: uppercase;
+        font-size: 1em;
+        font-family: 'Montez', cursive;
+        letter-spacing: .6rem;
+        border: 1px solid #000;
+        padding: .2em;
+    }
+}
+
+@media (max-width: 425px) {
+    .search-section #searchUs {
+        position: absolute;
+        left: 81%;
+        margin-top: 1em;
+        color: #fff;
+        opacity: .8;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 452px) {
+    .search-section #searchUs {
+        position: absolute;
+        left: 81%;
+        margin-top: 1em;
+        color: #fff;
+        opacity: .8;
+        cursor: pointer;
     }
 }
