@@ -28,16 +28,9 @@ forms.addEventListener("submit", (s)=> {
 
 });
 
-$('#forms').submit(()=> {
-    $('#forms').reset();
-    return false;
-});
-
-const cart = ()=> {
-    let clearBtn = document.querySelector("#clear");
+let clearBtn = document.querySelector("#clear");
     clearBtn.addEventListener("click", (clear)=>{
     clear.preventDefault();
     let cartitem = document.querySelector("#random-photos");
     cartitem.innerHTML = "";
 });
-}
