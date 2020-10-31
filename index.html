@@ -18,12 +18,19 @@
             </div>
             <div class="welcome"><p>A free collection of photos</p></div>
             <div class="search-section">
-                <form action="" class="form-control" id="forms" autocomplete="off"><input type="text" placeholder="Search your wallpapers" id="search" required /> <i class="fas fa-search" id="searchUs" type="submit"></i></form>
+                <form action="" class="form-control" id="forms" autocomplete="off">
+                <input type="text" placeholder="Search your wallpapers" id="search" required autocomplete="on"> 
+                <button type="submit" class="request"><i class="fas fa-search"></i></button>
+            </form>
             </div>
         </div>
-        <div class="main-div"><div id="random-photos"></div></div>
+            
+        <div class="main-div">
+        <div id="random-photos">
+
+        </div>
+        </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="app.js"></script>
     </body>
 </html>
-

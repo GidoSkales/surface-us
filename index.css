@@ -40,6 +40,7 @@ body {
     border: 1px solid #000;
     padding: 0.2em;
     border-radius: 2em;
+    cursor: pointer;
 }
 .us {
     font-weight: lighter;
@@ -81,14 +82,7 @@ body {
     color: #fff;
     outline: 0;
 }
-.search-section #searchUs {
-    position: absolute;
-    left: 71%;
-    margin-top: 1em;
-    color: #fff;
-    opacity: 0.8;
-    cursor: pointer;
-}
+
 ::placeholder {
     color: #fff;
     font-size: 1.2em;
@@ -97,21 +91,26 @@ body {
 .main-div {
     width: 100%;
     height: auto;
-    padding: 2em;
-    background: #fff;
 }
 .main-div #random-photos {
-    height: 100vh;
+    height: auto;
     background: rgba(255, 255, 255, 0.152);
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: center;
+    /* overflow: hidden; */
+    background: #000;
+    flex-grow: 1;
 }
 .main-div #random-photos > img {
+    max-width: 100%;
     width: 300px;
     height: 200px;
     margin: 5px;
     transition: all 1s;
+    overflow: hidden;
+    display: flex;
+    flex-flow: row wrap;
 }
 .main-div #random-photos > img:hover {
     transform: scale(1.1);
@@ -123,12 +122,14 @@ body {
         text-align: center;
     }
     .main-div #random-photos {
-        height: 100vh;
+        height: auto;
         background: rgba(255, 255, 255, 0.152);
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
         overflow-x: hidden;
+        background: #000000;
     }
     .search-section input[type="text"] {
         padding: 1em;
@@ -139,23 +140,12 @@ body {
         color: #fff;
         outline: 0;
     }
-    .search-section #searchUs {
-        position: absolute;
-        left: 90%;
-        margin-top: 1em;
-        color: #fff;
-        opacity: 0.8;
-        cursor: pointer;
-    }
+
     .s-nav-main {
         background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(gl/burj_dubai_skyscrapers_uae-1920x1200.jpg);
         height: 70vh;
         background-repeat: no-repeat;
         background-position: right;
-    }
-    .main-div {
-        padding: 1.5em;
-        background: #fff;
     }
     .Surface-Us-nav .main-logo {
         color: #000;
@@ -168,30 +158,73 @@ body {
         padding: 0.2em;
     }
 }
-@media (max-width: 425px) {
-    .search-section #searchUs {
-        position: absolute;
-        left: 81%;
-        margin-top: 1em;
-        color: #fff;
-        opacity: 0.8;
-        cursor: pointer;
-    }
-}
-@media (max-width: 452px) {
-    .search-section #searchUs {
-        position: absolute;
-        left: 81%;
-        margin-top: 1em;
-        color: #fff;
-        opacity: 0.8;
-        cursor: pointer;
-    }
-}
+
 @media (min-width: 769px) {
     .welcome {
         padding: 5em 5em;
         text-align: center;
     }
+
+    .main-div #random-photos > img:hover {
+        transform: scale(1);
+        cursor: pointer;
+    }
 }
 
+.request {
+    padding: 1em;
+    border-radius: 3em;
+    background: transparent;
+    border: none;
+    position: absolute;
+    right: 27%;
+    cursor: pointer;
+    outline: none;
+}
+.fa-search {
+    font-size: 1.3em;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 425px) {
+    .request {
+        right: 15%;
+        transform: translateX(50%);
+    }
+}
+
+@media (max-width: 375px) {
+    .request {
+        right: 17%;
+        transform: translateX(50%);
+    }
+}
+
+@media (min-width: 426px) {
+    .request {
+        right: 14%;
+        transform: translateX(50%);
+    }
+}
+
+@media (min-width: 598px) {
+    .request {
+        right: 12%;
+        transform: translateX(50%);
+    }
+}
+
+@media (min-width: 769px) {
+    .request {
+        right: 31%;
+        transform: translateX(50%);
+    }
+}
+
+@media (min-width: 1024px) {
+    .request {
+        right: 30%;
+        transform: translateX(50%);
+    }
+}
