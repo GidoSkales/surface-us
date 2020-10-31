@@ -228,3 +228,24 @@ body {
         transform: translateX(50%);
     }
 }
+
+.reset-button {
+    text-align: center;
+}
+.reset-button .reset {
+    padding: 1em 2em;
+    border-radius: 3em;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.227);
+}
+
+.reset-button .reset:hover {
+    opacity: .5;
+}
+
+.cart {
+    color: #fff;
+    font-size: 2em;
+}
