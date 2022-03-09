@@ -23,7 +23,6 @@ const initApp = () => {
 const formSubmission = () => {
   document.querySelector("#forms").addEventListener("submit", (event) => {
     event.preventDefault();
-
     const parseURL = `https://api.unsplash.com/search/photos?&query=${searchBar.value}&client_id=dmKyr8pE9N2ZsJm_htuP9iifZlGo1A8uKjmNGvlXius&per_page=40`;
     //
     fetch(parseURL)
@@ -31,13 +30,19 @@ const formSubmission = () => {
         return res.json();
       })
       .then((data) => {
-        data.results.forEach((photo, _, arr) => {
+        data.results.forEach((photo) => {
           console.log(photo.urls.regular);
           const image = `
-           <img src="${photo.urls.regular}"/>`;
-          renderItems.appendChild(image);
+           <img src="${photo.urls.regular}" style="width: 100%"/>`;
+          $(".render").append(image);
         });
       });
   });
 };
 formSubmission();
+
+const clearBtn = document.querySelector("#clear");
+clearBtn.addEventListener("click", (clear) => {
+  clear.preventDefault();
+  document.querySelector("render").innerHTML = "";
+});

@@ -122,6 +122,17 @@ body {
   transform: scale(1.1);
   cursor: pointer;
 }
+#forms {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#clear {
+  padding: 10px;
+}
+#clear i {
+  font-size: 25px;
+}
 
 /* Media queries */
 @media (max-width: 768px) {
