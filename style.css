@@ -1,0 +1,156 @@
+*,
+**::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  text-rendering: optimizeLegibility;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+}
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  background: #f1e7ec;
+}
+:root {
+  --dark: #322e40;
+  --wh: #fffdff;
+}
+/* Container */
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.side__bar {
+  background: var(--dark);
+  height: 100%;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  line-height: 5;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  color: var(--wh);
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  /* z-index: -1; */
+}
+/* Side Icons */
+.mid__icons i,
+.socials i {
+  color: var(--wh);
+  font-size: 30px;
+}
+.mid__icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.socials {
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Section */
+.display__items {
+  margin-left: 100px;
+  height: 100%;
+  padding: 0px 50px;
+  width: auto;
+}
+.display__items h4 {
+  font-size: 30px;
+  font-weight: 300;
+  /* text-transform: lowercase; */
+}
+/* Search */
+.search {
+  border: none;
+
+  border-radius: 10px;
+  width: 100%;
+  padding: 15px 20px;
+  outline-color: var(--wh);
+  /* visibility: hidden; */
+  font-size: 20px;
+  transition: 0.3s linear all;
+}
+.search__active {
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+/* render pic */
+.render {
+  background: var(--wh);
+  height: 550px;
+  width: calc(390%);
+  border-radius: 30px;
+  overflow: scroll;
+  margin-top: 20px;
+  visibility: hidden;
+}
+
+.render__active {
+  visibility: visible;
+  transition: all 3s;
+}
+
+.social__icons i {
+  font-size: 25px;
+}
+.render > img {
+  max-width: 100%;
+  width: 300px;
+  height: 200px;
+  margin: 5px;
+  transition: all 1s;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row wrap;
+}
+.render > img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .side__bar {
+    width: calc(3%);
+    height: 100vh;
+    position: fixed;
+    bottom: 0;
+  }
+  .mid__icons i,
+  .socials i {
+    font-size: 20px;
+  }
+  .display__items {
+    margin-left: 30px;
+    height: 100%;
+  }
+  .render {
+    height: 500px;
+    width: calc(110%);
+  }
+}
+@media (min-width: 769px) {
+  .render {
+    background: var(--wh);
+    height: 600px;
+    width: calc(390%);
+    border-radius: 30px;
+    overflow: scroll;
+    margin-top: 20px;
+  }
+}
