@@ -109,8 +109,8 @@ body {
   font-size: 25px;
 }
 .render > img {
-  width: 350px;
-  height: 350px;
+  width: 100px;
+  height: 100px;
   margin: 5px;
   transition: all 1s;
   overflow: hidden;
@@ -138,7 +138,7 @@ img {
 /* Media queries */
 @media (max-width: 768px) {
   .side__bar {
-    width: calc(3%);
+    width: calc(5%);
     height: 100vh;
     position: fixed;
     bottom: 0;
