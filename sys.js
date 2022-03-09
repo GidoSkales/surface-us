@@ -33,7 +33,7 @@ const formSubmission = () => {
         data.results.forEach((photo) => {
           console.log(photo.urls.regular);
           const image = `
-           <img src="${photo.urls.regular}" style="width: 100%"/>`;
+           <img src="${photo.urls.regular}"/>`;
           $(".render").append(image);
         });
       });
@@ -44,5 +44,5 @@ formSubmission();
 const clearBtn = document.querySelector("#clear");
 clearBtn.addEventListener("click", (clear) => {
   clear.preventDefault();
-  document.querySelector("render").innerHTML = "";
+  document.querySelector(".render").innerHTML = "";
 });

@@ -109,9 +109,8 @@ body {
   font-size: 25px;
 }
 .render > img {
-  max-width: 100%;
-  width: 300px;
-  height: 200px;
+  width: auto;
+  height: auto;
   margin: 5px;
   transition: all 1s;
   overflow: hidden;
@@ -132,6 +131,8 @@ body {
 }
 #clear i {
   font-size: 25px;
+}
+img {
 }
 
 /* Media queries */
