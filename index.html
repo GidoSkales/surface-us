@@ -1,44 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>webGallery</title>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width"/>
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" type="text/css" href="index.css" />
-        <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js" integrity="sha384-3Nqiqht3ZZEO8FKj7GR1upiI385J92VwWNLj+FqHxtLYxd9l+WYpeqSOrLh0T12c" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet" />
-        <script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" integrity="sha384-9/D4ECZvKMVEJ9Bhr3ZnUAF+Ahlagp1cyPC7h5yDlZdXs4DQ/vRftzfd+2uFUuqS" crossorigin="anonymous"></script>
-	<!-- GOOGLE ADMOB -->
-	<script data-ad-client="ca-pub-8748860844136644" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	    <meta name="google-site-verification" content="qr8pgHFZx93v9mqOLEeKA_iUswoI-tvyqw-h1CD_AtI" />
-    </head>
-    <body>
-        <div class="s-nav-main">
-            <div class="Surface-Us-nav">
-                <h5 class="main-logo">Surface<span class="us">-Us</span></h5>
-            </div>
-            <div class="welcome"><p>A free collection of photos</p></div>
-            <div class="search-section">
-                <form class="form-control" id="forms" autocomplete="off">
-                <input type="text" placeholder="Search your wallpapers" id="search" required title="Search your wallpapers"> 
-                <button type="submit" class="request"><i class="fas fa-search" title="Search"></i></button>
-            </form>
-            </div>
-            <div class="reset-button">
-                <button class="reset" id="clear" title="Clear search photos"><i class="fas fa-trash-alt cart"></i></button>
-		    <br><br>
-		    <a href="https://globadino.com" style="margin: 0 auto;">Trusted & Secure Cloud Mining</a>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>drib</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/4fb35b1106.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font Awesome -->
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+  </head>
+  <body>
+    <div class="container">
+      <div class="side__bar">
+        <div class="logo">
+          <i class="fa-solid fa-shield" style="font-size: 40px"></i>
         </div>
-            
-        <div class="main-div">
-        <div id="random-photos">
+        <div class="mid__icons">
+          <a href="#" class="icons"><i class="fa-solid fa-layer-group"></i></a>
+          <a href="index.html" class="icons"
+            ><i class="fa-brands fa-windows"></i
+          ></a>
+          <a style="cursor: pointer" class="icons click"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></a>
+        </div>
+        <div class="labels__socials">
+          <div class="socials">
+            <a href="" class="social__icons"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+            <a href="" class="social__icons"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+          </div>
+        </div>
+      </div>
 
-        </div>
-        </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="app.js"></script>
-    </body>
+      <!-- Section -->
+      <section class="display__items">
+        <h4 class="title">Free Collection Of Photo</h4>
+        <form id="forms">
+          <input
+            type="search"
+            id="search"
+            class="search"
+            placeholder="Enter your search"
+          />
+        </form>
+        <div class="render"></div>
+      </section>
+      <!-- Section -->
+    </div>
+    <script src="sys.js"></script>
+  </body>
 </html>
