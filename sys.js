@@ -1,47 +1,31 @@
-document.addEventListener("readystatechange", (event) => {
-  if (event.target.readyState === "complete") {
-    initApp();
-  }
-});
+(function () {
+  document.getElementById("clear").addEventListener("click", function () {
+    document.querySelector(".render").innerHTML = "";
+  });
 
-const searchBar = document.querySelector(".search");
-const searchIcon = document.querySelector(".click");
-const renderItems = document.querySelector(".render");
-
-const initApp = () => {
-  const display = () => {
-    searchIcon.addEventListener("click", () => {
-      searchBar.classList.toggle("search__active");
-    });
-    searchBar.addEventListener("keypress", () => {
-      document.querySelector(".render").classList.add("render__active");
-    });
-  };
-  display();
-};
-
-const formSubmission = () => {
-  (function () {
-    document.querySelector("#search").addEventListener("input", (s) => {
-      s.preventDefault();
-
-      fetch(
-        `https://api.unsplash.com/search/photos?&query=${s.target.value}&client_id=dmKyr8pE9N2ZsJm_htuP9iifZlGo1A8uKjmNGvlXius&per_page=40`
-      )
-        .then((response) => response.json())
-        .then((data) => {
-          console.log(data);
-          data.results.forEach((img) => {
-            $(".render").append(`<img src='${img.urls.regular}'>`);
-          });
+  document.getElementById("forms").addEventListener("submit", (s) => {
+    s.preventDefault();
+    fetch(
+      `https://api.unsplash.com/search/photos?&query=${s.target.elements.search.value}&client_id=dmKyr8pE9N2ZsJm_htuP9iifZlGo1A8uKjmNGvlXius&per_page=40`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        if (!data.results.length) {
+          throw new Error(`Data Not Found`);
+        }
+        data.results.forEach((img) => {
+          $(".render").append(`<img src='${img.urls.regular}'>`);
         });
-    });
-  })();
-};
-formSubmission();
+      })
+      .catch((err) => {
+        console.error(err);
+        alert(err);
+      });
 
-const clearBtn = document.querySelector("#clear");
-clearBtn.addEventListener("click", (clear) => {
-  clear.preventDefault();
-  document.querySelector(".render").innerHTML = "";
-});
+    s.target.elements.search.value = "";
+    s.target.elements.search.addEventListener("input", () => {
+      document.querySelector(".render").innerHTML = "";
+    });
+  });
+})();
