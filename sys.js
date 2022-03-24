@@ -21,23 +21,22 @@ const initApp = () => {
 };
 
 const formSubmission = () => {
-  document.querySelector("#forms").addEventListener("submit", (event) => {
-    event.preventDefault();
-    const parseURL = `https://api.unsplash.com/search/photos?&query=${searchBar.value}&client_id=dmKyr8pE9N2ZsJm_htuP9iifZlGo1A8uKjmNGvlXius&per_page=40`;
-    //
-    fetch(parseURL)
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        data.results.forEach((photo) => {
-          console.log(photo.urls.regular);
-          const image = `
-           <img src="${photo.urls.regular}"/>`;
-          $(".render").append(image);
+  (function () {
+    document.querySelector("#search").addEventListener("input", (s) => {
+      s.preventDefault();
+
+      fetch(
+        `https://api.unsplash.com/search/photos?&query=${s.target.value}&client_id=dmKyr8pE9N2ZsJm_htuP9iifZlGo1A8uKjmNGvlXius&per_page=40`
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+          data.results.forEach((img) => {
+            $(".render").append(`<img src='${img.urls.regular}'>`);
+          });
         });
-      });
-  });
+    });
+  })();
 };
 formSubmission();
 
